@@ -1,6 +1,6 @@
 <%- include("partials/header"); -%>
 
-<div class="center">
+<div class="center container-fluid">
     <h1>🌍</h1>
     <h1>Weather Checker</h1>
     <form action="/" method="post">
@@ -10,13 +10,13 @@
         </div>
         <div class="units">
             <input type="radio" id="standard" name="temp" value="standard">
-            <label for="standard">Standard(Kelvin)</label>
+            <label for="standard">Standard(Kelvin)</label><br>
             <input type="radio" id="metric" name="temp" value="metric">
-            <label for="metric">Metric(Celcius)</label>
+            <label for="metric">Metric(Celcius)</label><br>
             <input type="radio" id="imperial" name="temp" value="imperial">
             <label for="imperial">Imperial(Fahrenheit)</label><br>
         </div>
-        <button type="submit" class="btn btn-dark">Check it out</button>
+        <button type="submit" class="btn btn-lg btn-dark">Check it out</button>
     </form>
 </div>
 

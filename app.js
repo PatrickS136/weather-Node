@@ -23,13 +23,23 @@ app.post("/",urlParser,(req,res)=>{
     https.get(url,(response)=>{
         if (response.statusCode===200){
             response.on("data",(data)=>{
-                console.log(JSON.parse(data));
+                const parsedData=JSON.parse(data);
+                const unit=(temp==="imperial")?"Fahrenheit":(temp==="metric")?"Celcius":("Kelvin");
+                const selectedCity=parsedData.name;
+                const description=parsedData.weather[0].description;
+                const icon=parsedData.weather[0].icon;
+                const degree=parsedData.main.temp;
+                res.render("success",{city:selectedCity,description:description,icon:icon,temp:degree,units:unit});
             })
         }
         else{
-            res.send("Something went wrong, did you have a typo?");
+            res.render("failure");
         }
     })
+})
+
+app.post("/failure",urlParser,(req,res)=>{
+    res.redirect("/");
 })
 
 app.listen(port,()=>{

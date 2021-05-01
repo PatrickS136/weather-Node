@@ -1,0 +1,11 @@
+<%- include("partials/header"); -%>
+
+<div class="failure container-fluid">
+    <img src="https://openweathermap.org/img/wn/<%=icon%>@2x.png" alt="">
+    <h1>The weather in <%=city%> is <%=description%> with a temperature of <%=temp%> <%=units%></h1>
+    <form action="/failure" method="post">
+        <button type="submit" class="btn btn-lg btn-dark">Go back</button>
+    </form>
+</div>
+
+<%- include("partials/footer"); -%>
