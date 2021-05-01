@@ -1,5 +1,23 @@
 <%- include("partials/header"); -%>
 
-<h1>Hello World</h1>
+<div class="center">
+    <h1>🌍</h1>
+    <h1>Weather Checker</h1>
+    <form action="/" method="post">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">City</span>
+            <input type="text" name="city" class="form-control">
+        </div>
+        <div class="units">
+            <input type="radio" id="standard" name="temp" value="standard">
+            <label for="standard">Standard(Kelvin)</label>
+            <input type="radio" id="metric" name="temp" value="metric">
+            <label for="metric">Metric(Celcius)</label>
+            <input type="radio" id="imperial" name="temp" value="imperial">
+            <label for="imperial">Imperial(Fahrenheit)</label><br>
+        </div>
+        <button type="submit" class="btn btn-dark">Check it out</button>
+    </form>
+</div>
 
 <%- include("partials/footer"); -%>

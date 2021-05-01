@@ -1,3 +1,17 @@
 body{
-    background-color: red;
+    background-color: #d8e3e7;
+}
+
+h1, p{
+    font-weight: 700;
+}
+
+.center{
+    margin: auto;
+    text-align: center;
+    width: 40%;
+}
+
+button{
+    margin-top: 50;
 }
